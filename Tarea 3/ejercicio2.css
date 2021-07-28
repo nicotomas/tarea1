@@ -1,0 +1,26 @@
+p{color: brown;
+font-size: 22;
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+.destacados {
+    -webkit-box-shadow: 5px 5px 11px 11px rgba(151,128,255,0.53); 
+box-shadow: 5px 5px 11px 11px rgba(151,128,255,0.53);
+background-color: rgb(72, 72, 165);
+    text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+;}
+h2{text-decoration: underline;}
+h3{text-decoration: underline;}
+h4{text-decoration: underline;}
+
+h2{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+h3{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+h4{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+
+ ol{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+ ul{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+#cajas{
+    width: 300px;
+    background-color: rgb(172, 172, 172);
+
+}
