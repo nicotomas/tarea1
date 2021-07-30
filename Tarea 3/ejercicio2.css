@@ -1,5 +1,9 @@
 p{color: brown;
 font-size: 22;
+margin: auto;
+    width: 80%;
+    height: 200px;
+    border-width: 400px;
 text-align: center;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 .destacados {
