@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4: Javascript</title>
+</head>
+
+<body>
+
+    <script>
+        var valor1;
+
+
+        valor1 = prompt('Ingrese distancia en metros:', '');
+
+        if (valor1 < 1000) {
+            alert("Pie")
+
+        } else {
+            if (1000 < valor1 < 10000) {
+                alert("bicicleta")
+
+            } else {
+                if (10000 < valor1 < 30000) {
+                    alert("colectivo")
+
+                } else {
+                    if (30000 < valor1 < 100000) {
+                        alert("auto")
+
+                    } else {
+                        if (valor1 > 100000) {
+                            alert("avion")
+
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+        
+
+
+    </script>
+
+</body>
+
+</html>
