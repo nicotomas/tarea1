@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4: Javascript</title>
+</head>
+
+<body>
+    <script>
+        var vec = [];
+        var mayor = 0;
+        for (x = 0; x <= 4; x++) {
+            vec[x] = parseInt(prompt('Ingrese un numero'));
+            if (vec[x] > mayor) {
+                mayor = vec[x];
+            }
+        }
+        document.write('La secuencia introducida es: ');
+        document.write(vec);
+        document.write('<br>');
+        document.write("El numero mayor es: ");
+        document.write(mayor);
+        document.write('<br>');
+
+    </script>
+</body>
+
+</html>
