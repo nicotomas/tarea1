@@ -13,34 +13,32 @@
     <script>
         var valor1;
 
-
         valor1 = prompt('Ingrese distancia en metros:', '');
 
-        if (valor1 < 1000) {
-            alert("Pie")
-
+        if (valor1 <= 1000) {
+            alert("Puede ir pie")
         }
+
         else {
-            if (1000 < valor1 < 10000) {
-                alert("bicicleta")
 
-            } 
-        if (10000 < valor1 < 30000) {
-                    alert("colectivo")
+            if (valor1 > 1000 && valor1 <= 10000) {
+                alert("Se aconseja ir en bicicleta")
+            } else {
+                if (valor1 > 10000 && valor1 <= 30000) {
+                    alert("Se aconseja ir en colectivo")
 
-                } 
-                else {
-                    if (30000 < valor1 < 100000) {
-                        alert("auto")
+                } else {
+                    if (valor1 > 30000 && valor1 <= 100000) {
+                        alert("Se aconseja ir en auto")
 
-                    } 
-                    else {
-                        if (valor1 > 100000) {
-                            alert("avion")
+                    } else {
+                        if (valor1 >= 100000) {
+                            alert("Se aconseja ir en avion")
+
                         }
                     }
                 }
-            
+            }
         }
 
 
