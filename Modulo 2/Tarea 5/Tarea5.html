@@ -11,11 +11,13 @@
             console.log(x.value);
             var body = document.getElementById("body");
             body.style.backgroundColor = x.value
-
-        
         }
 
-        var rojo = document.getElementById('boton1');
+        function sfondo(x) {
+            var body = document.getElementById("body");
+            body.style.backgroundColor = x.value
+        }
+
     </script>
 
 </head>
@@ -25,11 +27,15 @@
         <option value="red">Rojo</option>
         <option value="green">Verde</option>
         <option value="blue">Azul</option>
+        <option value="white">Reset</option>
     </select>
 
-    <button id="boton1">Rojo</button>
-    <button id="boton2">Azul</button>
-    <button id="boton3">Verde</button>
+    <button id="boton1" value="red" onclick="sfondo(this)">Rojo</button>
+    <button id="boton2" value="blue" onclick="sfondo(this)">Azul</button>
+    <button id="boton3" value="green" onclick="sfondo(this)">Verde</button>
+    <button id="boton4" value="white" onclick="sfondo(this)">Reset</button>
+
+    
 
 </body>
 
