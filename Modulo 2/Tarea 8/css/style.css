@@ -1,0 +1,43 @@
+/* 
+font-family: 'Alfa Slab One', cursive;
+ */
+/* 
+font-family: 'Open Sans', sans-serif;
+ */
+
+ 
+
+h1, h2 {font-family: 'Alfa Slab One', cursive;} 
+.hero { background: url(../img/3bed8d76ebd085bbe862125429d930c3.jpg) no-repeat;
+background-size:cover;
+height: 0,5vh;
+min-height: 1820px;
+color: white;}
+
+/* historia */
+
+.lista-historia li{ margin: 4px 0;}
+
+.lista-historia li a {background-color: #fff;
+font-family: 'Alfa Slab One', cursive;
+text-decoration: none;
+font-size: 1.2rem;
+color: #a0a0a0;
+transition: all .2s ease-in-out;
+display: block;
+}
+
+.lista-historia li a :hover { color: #212529;
+/* width: 120px; */
+/* height: 50px; */
+filter: grayscale(70%);
+transition: all .2s ease-in-out;
+margin-right: 1rem;
+/* opacity: 0.7; */
+}
+
+.lista-historia a :hover img { filter: none;
+margin-right: 1.4rem;
+opacity: 1;}
+
+.staff {background-color: #efefef;}
