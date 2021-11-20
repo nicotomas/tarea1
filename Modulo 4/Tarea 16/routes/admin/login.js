@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var usuariosmodels = ('./../../models/usuariosmodels');
+var usuariosmodels = require('./../../models/usuariosmodels');
 
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('admin/login', {
-        layout: 'admin/layout'
+        layout: 'admin/layout',
     });
+    next();
 }); 
 
     // para salir
@@ -16,29 +17,31 @@ router.get('/', function (req, res, next) {
         req.session.destroy();
         res.render('admin/login', {
             layout: 'admin/layout'
-        })
-    })
+        });
+        next();
+    });
 
     router.post('/', async (req, res, next) => {
         try {
-            var usuario = req.body.usuario;
+            var user = req.body.user;
             var password = req.body.password;
 
             console.log(req.body);
 
-            var data = await usuariosmodels.getUserAndPassword(usuario, password);
+            var data = await usuariosmodels.getUserAndPassword(user, password);
 
             if (data != undefined) {
                 req.session.id_usuario = data.id,
                     req.session.nombre = data.usuario,
-                    res.redirect('/admin/novedades');
+                    res.redirect('admin/novedades');
             } else {
                 res.render('admin/login', {
                     layout: 'admin/layout',
                     error: true
                 })
             }
-        } finally { }
-    })
+        } finally { };
+        next();
+    });
 
     module.exports = router;
