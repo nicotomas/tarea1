@@ -23,7 +23,7 @@ router.get('/', function (req, res, next) {
 
     router.post('/', async (req, res, next) => {
         try {
-            var user = req.body.user;
+            var user = req.body.usuario;
             var password = req.body.password;
 
             console.log(req.body);
@@ -38,10 +38,11 @@ router.get('/', function (req, res, next) {
                 res.render('admin/login', {
                     layout: 'admin/layout',
                     error: true
-                })
+                });
             }
-        } finally { };
-        next();
+        } catch (error) {
+            console.log(error)
+        }
     });
 
     module.exports = router;
