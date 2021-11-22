@@ -10,7 +10,7 @@
                 <a class="nav-link" data-scroll href="#Home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-scroll href="#Historia">Historia</a>
+                <a class="nav-link" data-scroll href="#novedades">Novedades</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-scroll href="#nosotros">Nosotros</a>
@@ -44,25 +44,15 @@
         </div>
 
     </div>
-    <div id="Historia" class="row py-4">
-        <div class="col-md-5 offset-md-2 py-3">
-            <h2>Historia</h2>
-            <ul class="lista-historia">
-                <li><a href="#" data-toggle="modal" data-target="#modalEjemplo"><img
-                            src="images/Copas-Vino.jpg">Inicio</a></li>
-
-                <li><a href="#" data-toggle="modal" data-target="#modalEjemplo1"><img
-                            src="images/Copas-Vino.jpg">Vision</a></li>
-
-                <li><a href="#" data-toggle="modal" data-target="#modalEjemplo2"><img
-                            src="images/Copas-Vino.jpg">Mision</a></li>
-
-                <li><a href="#" data-toggle="modal" data-target="#modalEjemplo3"><img
-                            src="images/Copas-Vino.jpg">Actualidad</a></li>
-
-
-
-
+    <div id="novedades" class="row py-4">
+        <div class="col-md-6 offset-md-2 py-3">
+            <h2>Novedades</h2>
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modal{{id}}"><img
+                            src="images/Copas-Vino.jpg" height="130vh">{{titulo}}</a>
+                </li>
+                {{/each}}
             </ul>
 
         </div>
@@ -70,19 +60,20 @@
         Esto es una prueba
         <!-- Modal -->
     </div>
-    <div class="modal fade" id="modalEjemplo" tabindex="-1" aria-labelledby="modalEjemploLabel" aria-hidden="true">
+
+    {{#each novedades}}
+    <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="modalEjemploLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="modalEjemploLabel">Inicios</h1>
+                    <h1 class="modal-title" id="modalEjemploLabel">{{titulo}}</h1>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio rerum necessitatibus
-                    eligendi. Fuga, voluptatem ipsa praesentium amet reiciendis iusto in ratione explicabo
-                    necessitatibus doloribus, doloremque beatae ab pariatur odio.
+                    <h4>{{subtitulo}}</h4>
+                    <p>{{cuerpo}}</p> 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -162,6 +153,8 @@
 
 
 </div>
+
+{{/each}}
 
 <div id="nosotros" class="row align-items-stretch my-3 staff py-4">
 
