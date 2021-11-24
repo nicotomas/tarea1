@@ -50,7 +50,7 @@
             <ul class="lista-novedades">
                 {{#each novedades}}
                 <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modal{{id}}">
-                    <img src="{{imagen}}" width="120">{{titulo}}</a>
+                        <img src="{{imagen}}" width="120">{{titulo}}</a>
                 </li>
                 {{/each}}
             </ul>
@@ -73,8 +73,8 @@
                 </div>
                 <div class="modal-body">
                     <h4>{{subtitulo}}</h4>
-                    <img src="{{imagen}}" alt="{{titulo}}"/>
-                    <p>{{cuerpo}}</p> 
+                    <img src="{{imagen}}" alt="{{titulo}}" />
+                    <p>{{cuerpo}}</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -216,7 +216,7 @@
     </div>
 
     <div class="col-md-4 mt-4 mt-sm-0">
-        <h4>Registrarse para finalizar la compra:</h4>
+        <h4>Contactanos para mas info:</h4>
         </p>
         <p>&nbsp;</p>
 
@@ -227,32 +227,30 @@
                     <label for="inputEmail4" class="form-label">Email</label>
                     <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email">
                 </div>
-                <div class="col-md-6">
+                {{!-- <div class="col-md-6">
                     <label for="inputPassword4" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="inputPassword4" name="contraseña"
                         placeholder="Contraseña">
+                </div> --}}
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Telefono</label>
+                    <input type="text" class="form-control" id="telefono" placeholder="Telefono"
+                        name="telefono">
                 </div>
                 <div class="col-12">
-                    <label for="inputAddress" class="form-label">Dirección</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Avenida Siempreviva 742"
-                        name="direccion">
+                    <label for="inputAddress" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
                 </div>
                 <div class="col-12">
-                    <label for="inputAddress" class="form-label">Nombre y Apellido</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Nombre & Apellido"
-                        name="nombreyapellido">
-                </div>
-                <div class="col-12">
-                    <label for="inputAddress2" class="form-label">Dirección 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Departamento Nº, Nº de Piso"
-                        name="direccion2">
+                    <label for="inputAddress2" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Apellido" name="apellido">
                 </div>
                 <div class="col-md-6">
                     <label for="inputCity" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCity" name="ciudad" placeholder="Ciudad">
+                    <input type="text" class="form-control" id="Ciudad" name="ciudad" placeholder="Ciudad">
                 </div>
                 <div class="col-md-4">
-                    <label for="inputState" class="form-label">Estado</label>
+                    <label for="inputState" class="form-label">Pais</label>
                     <select id="inputState" class="form-select">
                         <option selected>Elegir...</option>
                         <option>Argentina</option>
@@ -260,20 +258,26 @@
                         <option>Mexico</option>
                     </select>
                 </div>
-                <div class="col-md-2">
+                {{!-- <div class="col-md-2">
                     <label for="inputZip" class="form-label">Código Postal</label>
                     <input type="text" class="form-control" id="inputZip" name="codigopostal" placeholder="1234">
-                </div>
+                </div> --}}
+
                 <div class="col-12">
-                    <div class="form-check">
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="4" name="comentarios"></textarea>
+                    </div>
+
+                    {{!-- <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="gridCheck">
                         <label class="form-check-label" for="gridCheck">
                             Check me out
                         </label>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </form>
             <p>{{message}}</p>

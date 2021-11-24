@@ -37,14 +37,14 @@ novedades=novedades.map(novedad =>{
 router.post('/', async (req, res, next) => {
 
   var email = req.body.email;
-  var contraseña = req.body.contraseña;
-  var direccion = req.body.direccion;
-  var nombreyapellido = req.body.nombreyapellido;
-  var direccion2 = req.body.direccion2;
-  var ciudad = req.body.ciudad;
-  var codigopostal = req.body.codigopostal;
+  // var contraseña = req.body.contraseña;
+  // var direccion = req.body.direccion;
+  var nombre = req.body.nombre;
+  var apellido = req.body.apellido;
+  var telefono = req.body.telefono;
+  var mensaje = req.body.comentarios;
 
-  // console.log(req.body);
+  console.log(req.body);
 
   var obj = {
     to: 'nicotomas181@gmail.com',
@@ -60,13 +60,12 @@ router.post('/', async (req, res, next) => {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS
     }
-
   })
 
   var info = await transporter.sendMail(obj);
 
   res.render('index', {
-    message: 'mensaje enviado correctamente'
+    message: 'Mensaje enviado correctamente'
   });
 
 });
